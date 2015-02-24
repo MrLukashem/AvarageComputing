@@ -1,0 +1,49 @@
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <EditText
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="50px"
+        android:id="@+id/editText"
+        android:hint="Name:"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="200px"
+            android:id="@+id/spinner_weight"
+            android:entries="@array/weights_array"
+            android:prompt="@string/weight"
+            android:layout_weight="1.0"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="200px"
+            android:id="@+id/spinner_grade"
+            android:layout_gravity="center_horizontal"
+            android:entries="@array/grades_array"
+            android:prompt="@string/grade"
+            android:layout_weight="1.0"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="@string/add_record"
+        android:id="@+id/button"
+
+        android:onClick="addItem"/>
+
+</LinearLayout>
